@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="person_list">
+        <item>Person1</item>
+        <item>Person2</item>
+        <item>Person3</item>
+    </array>
+</resources>

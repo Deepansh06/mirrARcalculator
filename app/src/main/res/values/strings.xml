@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">mirrARcalculator</string>
+
+    <string name="req_calculator">Requirement Calculator</string>
+
+    <string name="iPad">iPad</string>
+    <string name="stand">Stand</string>
+    <string name="tv">TV</string>
+    <string name="mac_mini">Mac Mini</string>
+    <string name="processed_images">Processed Images</string>
+
+    <string name="total">Total</string>
+
+    <string name="amount">Amount</string>
+
+    <string name="_9_7">9.7\"</string>
+    <string name="_10_2">10.2\"</string>
+    <string name="_10_5">10.5\"</string>
+    <string name="_11">11\"</string>
+    <string name="_12_9">12.9\"</string>
+
+    <string name="table_top">Table Top</string>
+    <string name="_kiosk">5\" Kiosk</string>
+
+    <string name="mi">MI 50\"</string>
+    <string name="samsung">Samsung 43\"</string>
+
+    <string name="nest">Next</string>
+
+    <string name="product_var">Product Variable</string>
+    <string name="selected_option">Selected Option</string>
+
+    <string name="tax">Tax</string>
+    <string name="to_be_paid">To be Paid</string>
+
+    <string name="sales_person_name">Sales Person Name</string>
+    <string name="client_name">Client Name</string>
+    <string name="brand_name">Brand Name</string>
+    <string name="email_id">E-mail ID</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="address">Address</string>
+    <string name="advance_pay_amount">Advance Payment Amount</string>
+    <string name="advance_pay_method">Advance Payment Method</string>
+
+</resources>

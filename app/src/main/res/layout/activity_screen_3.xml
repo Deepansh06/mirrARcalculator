@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="Screen3ViewModel"
+            type="com.waysideutilities.mirrarcalculator.viewmodel.Screen3ViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:layout_marginBottom="?attr/actionBarSize">
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sp_person"
+                    android:layout_margin="10dp"
+                    android:entries="@array/person_list"
+                    android:onItemSelected="@{(parent,view,pos,id)->Screen3ViewModel.onSelectPerson(parent,view,pos,id)}"
+                    android:padding="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/client_name"
+                    android:inputType="textPersonName"
+                    android:text="@={Screen3ViewModel.ClientName}"
+                    android:imeOptions="actionNext"
+                    android:maxLength="50"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/et_client_name"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/brand_name"
+                    android:inputType="textPersonName"
+                    android:text="@={Screen3ViewModel.BrandName}"
+                    android:imeOptions="actionNext"
+                    android:maxLength="50"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/et_brand_name"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email_id"
+                    android:inputType="textEmailAddress"
+                    android:text="@={Screen3ViewModel.EmailAddress}"
+                    android:imeOptions="actionNext"
+                    android:maxLength="50"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/et_email"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/mobile_no"
+                    android:inputType="number"
+                    android:imeOptions="actionNext"
+                    android:text="@={Screen3ViewModel.Mobile}"
+                    android:maxLength="10"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/et_mobile"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/address"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:text="@={Screen3ViewModel.Address}"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/et_address"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/advance_pay_amount"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:text="@={Screen3ViewModel.PaymentAmount}"
+                    android:maxLength="10"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/et_advance_payment_amount"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sp_payment_method"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:entries="@array/payment_list"
+                    android:onItemSelected="@{(parent,view,pos,id)->Screen3ViewModel.onSelectPayment(parent,view,pos,id)}"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nutton_send"
+            android:text="Send"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:onClick="@{(v) -> Screen3ViewModel.onClick(v)}"
+            android:background="@color/colorPrimary"
+            android:layout_margin="5dp"
+            android:padding="5dp"/>
+    </RelativeLayout>
+</layout>
